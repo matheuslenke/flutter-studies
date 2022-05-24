@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "pokedex"
+		},
+		{
+			"path": "playgrounds"
 		}
 	],
 	"settings": {}
