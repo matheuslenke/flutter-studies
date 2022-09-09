@@ -22,7 +22,7 @@ class AdaptativeButton extends StatelessWidget {
         : ElevatedButton(
             style: ElevatedButton.styleFrom(
                 primary: Theme.of(context).primaryColor,
-                surfaceTintColor: Colors.white),
+                onSurface: Colors.white),
             onPressed: onPressed,
             child: Text(label),
           );

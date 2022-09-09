@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class TransactionForm extends StatefulWidget {
-  TransactionForm({Key? key, required this.onSubmit}) : super(key: key);
+  TransactionForm({Key? key, required this.onSubmit}) : super(key: key) {
+    print("Constructor Transaction Form");
+  }
 
   final void Function(String, double, DateTime) onSubmit;
 
@@ -16,8 +18,23 @@ class TransactionForm extends StatefulWidget {
 class _TransactionFormState extends State<TransactionForm> {
   final _titleController = TextEditingController();
   final _valueController = TextEditingController();
-
   DateTime _selectedDate = DateTime.now();
+
+  _TransactionFormState() {
+    print("Constructor TransactionFormState");
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    print("InitState() _TransactionFormState");
+  }
+
+  @override
+  void didUpdateWidget(TransactionForm oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print("didUpdateWidget() _TransactionFormState");
+  }
 
   _submitForm() {
     final title = _titleController.text;
